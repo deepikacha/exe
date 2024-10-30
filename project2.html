@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .todo-item { display: flex; justify-content: space-between; margin: 5px 0; }
+        .icon { cursor: pointer; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <div>
+        <input type="text" id="todo-name" placeholder="To-do Name" />
+        <input type="text" id="todo-description" placeholder="Description" />
+        <button id="add-item">Add Item</button>
+    </div>
+
+    <h3>To-dos Remaining</h3>
+    <div id="todos-remaining"></div>
+
+    <h3>To-dos Done</h3>
+    <div id="todos-done"></div>
+
+    <script src="project2.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Send Message</h1>
+    <form id="message-form" action="/send-message" method="POST">
+        <input type="hidden" name="username" id="username"> <!-- Hidden input for username -->
+        <label for="message">Message:</label>
+        <input type="text" name="message" id="message">
+        <button type="submit">Send</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = localStorage.getItem('username');
+            if (username) {
+                alert(`Welcome, ${username}!`);
+                document.getElementById('username').value = username; // Populate hidden input with username
+            } else {
+                alert('Please log in first!');
+                window.location.href = '/login'; // Redirect to login if username is not found
+            }
+        });
+    </script>
+</body>
+</html>
